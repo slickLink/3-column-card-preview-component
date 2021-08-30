@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$bright_orange: hsl(31, 77%, 52%);
+$dark_cyan: hsl(184, 100%, 22%);
+$very_dark_cyan: hsl(179, 100%, 13%);
+$bg_color: hsl(0, 0%, 95%);
+$paragraph_color: hsla(0, 0%, 100%, 0.75);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    color: $paragraph_color;
+}
+
+body {
+    background-color: $bg_color;
+    margin: 5em 0;
+}
+
+section {
+    margin: 0 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    flex: 0 1 210px;
+    padding: 3em;
+
+    h2 {
+        color: $bg_color;
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 2.5em;
+        margin: 2.5rem 0;
+    }
+    
+    p {
+        line-height: 1.5em;
+        margin-bottom: 2em;
+    }
+    
+    a {
+        display: block;
+        padding: 1em;
+        width: 8em;
+        text-decoration: none;
+        background-color: $bg_color;
+        border-radius: 30px;
+        border: 2px solid $bg_color;
+        text-align: center;
+        color: $dark_cyan;
+    }
+    a:hover {
+        background-color: inherit;
+        color: white !important;
+    }
+}
+
+.card:nth-child(1) {
+    border-radius: 5px 5px 0 0;
+    background-color: $bright_orange;
+    
+    a {
+        color: $bright_orange;
+    }
+}
+
+.card:nth-child(2) {
+    border-radius: 0 0 5px 5px;
+    background-color: $dark_cyan;
+
+    a {
+        color: $dark_cyan;
+    }
+}
+
+
+.card:nth-child(3) {
+    background-color: $very_dark_cyan;
+    border-radius: 0 5px 5px 0;
+
+    a {
+        color: $very_dark_cyan;
+    }
+
+}
+
+@media screen and (min-width: 645px) {
+    .card:nth-child(1) {
+        border-radius: 5px 0 0 5px;
+    }
+    
+    .card:nth-child(2) {
+        border-radius: 0 5px 5px 0;
+    }
+    
+    .card:nth-child(3) {
+        border-radius: 0 0 5px 5px;
+    }
+    
+}
+
+@media screen and (min-width: 945px) {
+    .card {
+        p {
+            margin-bottom: 6em;
+        }
+    }
+    .card:nth-child(2) {
+        border-radius: 0;
+    }
+    
+    .card:nth-child(3) {
+        border-radius: 0 5px 5px 0;
+    }
+    
+}
+
